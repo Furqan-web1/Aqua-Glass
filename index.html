@@ -11,19 +11,19 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            max-width: 100%; /* VERHINDERT HORIZONTALES SCROLLEN */
+            max-width: 100%;
         }
         
         html, body {
             width: 100%;
-            overflow-x: hidden; /* WICHTIG: Kein horizontales Scrollen */
+            overflow-x: hidden;
             position: relative;
         }
         
         body {
             font-family: 'Inter', sans-serif;
             color: #1a1a1a;
-            background: #f4f1ea; /* Dunkleres Beige als vorher */
+            background: #f4f1ea;
             line-height: 1.6;
             overflow-x: hidden;
             font-weight: 300;
@@ -32,33 +32,31 @@
         
         /* DARK MODE VARIABLES */
         :root {
-            /* Light Mode Colors - ANGEPASST mit dunklerem Beige */
             --gold: #c5a572;
             --gold-light: #e2d4b7;
             --gold-dark: #a88c4f;
             --navy: #0a2540;
             --navy-light: #2c3e50;
-            --cream: #f4f1ea;        /* Dunkleres Beige */
-            --cream-dark: #e8e1d5;   /* Noch dunkleres Beige für Akzente */
+            --cream: #f4f1ea;
+            --cream-dark: #e8e1d5;
             --white: #ffffff;
             --text-primary: #1a1a1a;
             --text-secondary: #4a4a4a;
-            --border-color: #d5cfc4;  /* Dunklerer Rand */
+            --border-color: #d5cfc4;
             --shadow: 0 10px 40px rgba(10, 37, 64, 0.08);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --bg-color: #f4f1ea;
             --card-bg: #ffffff;
         }
         
-        /* Dark Mode Colors - Mattes Dunkelblau - Jetzt mit HELLEREN Textfarben */
         body.dark-mode {
             --navy: #1a2a3a;
             --navy-light: #3a4a5a;
             --cream: #0f1a24;
             --cream-dark: #1a2a3a;
             --white: #1a2a3a;
-            --text-primary: #f0f0f0;  /* Sehr hell für Haupttexte */
-            --text-secondary: #c0c0c0; /* Hellgrau für Nebentexte */
+            --text-primary: #f0f0f0;
+            --text-secondary: #c0c0c0;
             --border-color: #2a3a4a;
             --shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
             --bg-color: #0f1a24;
@@ -78,10 +76,9 @@
         body.dark-mode h2,
         body.dark-mode h3,
         body.dark-mode h4 {
-            color: var(--text-primary); /* Helle Überschriften im Dark Mode */
+            color: var(--text-primary);
         }
         
-        /* Zusätzliche Sicherheit für alle Text-Elemente im Dark Mode */
         body.dark-mode,
         body.dark-mode p,
         body.dark-mode .lead,
@@ -90,14 +87,6 @@
         body.dark-mode .footer-info a,
         body.dark-mode .copyright,
         body.dark-mode .form-group label {
-            color: var(--text-secondary);
-        }
-        
-        body.dark-mode .lead {
-            color: var(--text-secondary);
-        }
-        
-        body.dark-mode .service-card p {
             color: var(--text-secondary);
         }
         
@@ -126,19 +115,12 @@
             transition: var(--transition);
         }
         
-        h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-        }
-        
         p {
             color: var(--text-secondary);
             font-size: 1.15rem;
             line-height: 1.8;
             max-width: 700px;
             font-weight: 300;
-            transition: color 0.3s ease;
         }
         
         .lead {
@@ -147,13 +129,13 @@
             font-weight: 300;
         }
         
-        /* LAYOUT - FIX FÜR HORIZONTALES SCROLLEN */
+        /* LAYOUT */
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 4rem;
             width: 100%;
-            overflow: hidden; /* Verhindert Überlauf */
+            overflow: hidden;
         }
         
         section {
@@ -161,7 +143,7 @@
             background-color: var(--bg-color);
             transition: background-color 0.3s ease;
             width: 100%;
-            overflow: hidden; /* WICHTIG */
+            overflow: hidden;
         }
         
         /* DARK MODE TOGGLE */
@@ -191,7 +173,6 @@
             width: 24px;
             height: 24px;
             fill: var(--gold);
-            transition: var(--transition);
         }
         
         .theme-toggle .sun {
@@ -212,7 +193,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(244, 241, 234, 0.95); /* Angepasst an neues Beige */
+            background: rgba(244, 241, 234, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1.5rem 0;
@@ -238,6 +219,7 @@
             align-items: center;
             gap: 1.5rem;
             flex-shrink: 0;
+            cursor: pointer;
         }
         
         .logo-img {
@@ -342,7 +324,7 @@
             width: 100%;
         }
         
-        /* HERO SECTION - mit neuem Gradient */
+        /* HERO SECTION */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -399,7 +381,7 @@
             color: var(--gold);
         }
         
-        /* SERVICES SECTION */
+        /* SERVICES GRID */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -468,514 +450,7 @@
             left: 0;
         }
         
-        /* PRICING SECTION - FIX FÜR MOBILE TABELLE */
-        .pricing-section {
-            background: var(--navy);
-            color: var(--cream);
-            width: 100%;
-            overflow: hidden;
-        }
-        
-        .pricing-section h2,
-        .pricing-section p {
-            color: var(--cream);
-        }
-        
-        .pricing-section h2:after {
-            background: var(--gold);
-        }
-        
-        .pricing-table-container {
-            width: 100%;
-            overflow-x: auto; /* Nur für die Tabelle scrollbar */
-            -webkit-overflow-scrolling: touch;
-            margin: 5rem auto 0;
-            max-width: 1000px;
-        }
-        
-        .pricing-table {
-            width: 100%;
-            min-width: 600px; /* Mindestbreite für Tabelle */
-            border-collapse: separate;
-            border-spacing: 0;
-            overflow: hidden;
-            border-radius: 4px;
-        }
-        
-        .pricing-table thead {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .pricing-table th {
-            padding: 2rem;
-            text-align: center;
-            font-weight: 300;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            white-space: nowrap;
-            color: var(--cream);
-        }
-        
-        .pricing-table td {
-            padding: 1.8rem 2rem;
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            transition: var(--transition);
-            white-space: nowrap;
-            color: var(--cream);
-        }
-        
-        .pricing-table tbody tr:hover {
-            background: rgba(255, 255, 255, 0.05);
-        }
-        
-        .pricing-table .price-cell {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            color: var(--gold);
-            font-weight: 400;
-        }
-        
-        /* CONTACT SECTION */
-        .contact-form {
-            max-width: 700px;
-            margin: 5rem auto 0;
-            width: 100%;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            width: 100%;
-        }
-        
-        .form-group {
-            margin-bottom: 2.5rem;
-            width: 100%;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.8rem;
-            color: var(--navy);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 300;
-        }
-        
-        body.dark-mode .form-group label {
-            color: var(--text-primary);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 1.2rem 1.5rem;
-            border: 1px solid var(--border-color);
-            background: var(--card-bg);
-            font-size: 1rem;
-            transition: var(--transition);
-            color: var(--text-primary);
-            font-family: 'Inter', sans-serif;
-            max-width: 100%;
-        }
-        
-        body.dark-mode .form-control {
-            color: var(--text-primary);
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(197, 165, 114, 0.1);
-        }
-        
-        select.form-control {
-            appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c5a572' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-            background-repeat: no-repeat;
-            background-position: right 1.5rem center;
-            background-size: 1.2em;
-        }
-        
-        /* FOOTER */
-        footer {
-            background: var(--navy);
-            color: var(--cream);
-            padding: 6rem 0 4rem;
-            width: 100%;
-            overflow: hidden;
-        }
-        
-        body.dark-mode footer {
-            background: #0a121c;
-        }
-        
-        .footer-links {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 4rem;
-            margin-bottom: 4rem;
-            width: 100%;
-        }
-        
-        .footer-info h3 {
-            color: var(--cream);
-            margin-bottom: 1.5rem;
-            font-family: 'Cormorant Garamond', serif;
-        }
-        
-        body.dark-mode .footer-info h3 {
-            color: var(--text-primary);
-        }
-        
-        .footer-info p,
-        .footer-info a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: var(--transition);
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-        
-        body.dark-mode .footer-info p,
-        body.dark-mode .footer-info a {
-            color: var(--text-secondary);
-        }
-        
-        .footer-info a:hover {
-            color: var(--gold);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
-        }
-        
-        body.dark-mode .copyright {
-            color: var(--text-secondary);
-        }
-        
-        /* IMPRESSUM & DATENSCHUTZ MODAL */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 2000;
-            overflow-y: auto;
-        }
-        
-        .modal-content {
-            background: var(--card-bg);
-            margin: 5% auto;
-            padding: 4rem;
-            max-width: 800px;
-            border-radius: 4px;
-            position: relative;
-            border: 1px solid var(--border-color);
-            width: 90%;
-            max-width: 800px;
-        }
-        
-        body.dark-mode .modal-content {
-            background: var(--card-bg);
-            color: var(--text-primary);
-        }
-        
-        body.dark-mode .modal-content h2,
-        body.dark-mode .modal-content h3 {
-            color: var(--text-primary);
-        }
-        
-        body.dark-mode .modal-content p {
-            color: var(--text-secondary);
-        }
-        
-        .close-modal {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-secondary);
-        }
-        
-        /* RESPONSIVE DESIGN - IPAD (768px) */
-        @media (max-width: 1200px) {
-            .container {
-                padding: 0 3rem;
-            }
-            
-            section {
-                padding: 8rem 0;
-            }
-            
-            .services-grid {
-                gap: 2rem;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .footer-links {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 3rem;
-            }
-            
-            .hero h1 {
-                font-size: clamp(3rem, 6vw, 4rem);
-            }
-        }
-        
-        /* RESPONSIVE DESIGN - MOBILE (768px und kleiner) */
-        @media (max-width: 768px) {
-            /* WICHTIG: Kein horizontales Scrollen auf Mobile */
-            html, body {
-                overflow-x: hidden;
-                position: relative;
-                width: 100%;
-            }
-            
-            .container {
-                padding: 0 2rem;
-                max-width: 100%;
-                overflow: hidden;
-            }
-            
-            section {
-                padding: 6rem 0;
-                width: 100%;
-                overflow: hidden;
-            }
-            
-            h1 {
-                font-size: clamp(2.8rem, 8vw, 3.5rem);
-            }
-            
-            h2 {
-                font-size: clamp(2.2rem, 6vw, 2.8rem);
-            }
-            
-            /* MOBILE NAVIGATION */
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            nav ul {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background: var(--card-bg);
-                flex-direction: column;
-                padding: 2rem;
-                gap: 1.5rem;
-                transform: translateY(-100%);
-                opacity: 0;
-                visibility: hidden;
-                transition: var(--transition);
-                box-shadow: var(--shadow);
-                border-top: 1px solid var(--border-color);
-                z-index: 999;
-            }
-            
-            nav ul.active {
-                transform: translateY(0);
-                opacity: 1;
-                visibility: visible;
-            }
-            
-            nav a {
-                display: block;
-                padding: 1rem 0;
-                border-bottom: 1px solid var(--border-color);
-            }
-            
-            nav a:last-child {
-                border-bottom: none;
-            }
-            
-            /* SERVICES EINZELN ANZEIGEN */
-            .services-grid {
-                grid-template-columns: 1fr;
-                max-width: 500px;
-                margin-left: auto;
-                margin-right: auto;
-                gap: 2rem;
-            }
-            
-            /* FORMULAR EINZELN ANZEIGEN */
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            /* FOOTER EINZELN ANZEIGEN */
-            .footer-links {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            /* MODAL ANPASSEN */
-            .modal-content {
-                margin: 10% auto;
-                padding: 2rem;
-                width: 95%;
-            }
-            
-            /* THEME TOGGLE KLEINER */
-            .theme-toggle {
-                bottom: 1rem;
-                right: 1rem;
-                width: 50px;
-                height: 50px;
-            }
-            
-            /* PREIS-TABELLE MOBILE OPTIMIERT */
-            .pricing-table-container {
-                margin: 3rem auto 0;
-                padding: 0 1rem;
-            }
-            
-            .pricing-table {
-                min-width: 500px;
-                font-size: 0.9rem;
-            }
-            
-            .pricing-table th,
-            .pricing-table td {
-                padding: 1rem 0.5rem;
-            }
-            
-            .pricing-table .price-cell {
-                font-size: 1.5rem;
-            }
-        }
-        
-        /* KLEINE MOBILES (480px und kleiner) */
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 1.5rem;
-            }
-            
-            section {
-                padding: 5rem 0;
-            }
-            
-            .cta-button {
-                padding: 1rem 2rem;
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .service-card {
-                padding: 2.5rem 1.5rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .pricing-table {
-                min-width: 400px;
-            }
-        }
-        
-        /* IPAD PRO & GRÖSSERE TABLETS (1024px) */
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .container {
-                padding: 0 3rem;
-            }
-            
-            h1 {
-                font-size: clamp(3rem, 5vw, 4rem);
-            }
-            
-            .pricing-table-container {
-                padding: 0 2rem;
-            }
-        }
-        
-        /* SEHR KLEINE DISPLAYS (unter 360px) */
-        @media (max-width: 360px) {
-            .container {
-                padding: 0 1rem;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .logo-text {
-                font-size: 1.4rem;
-            }
-            
-            .pricing-table {
-                min-width: 320px;
-                font-size: 0.8rem;
-            }
-        }
-        
-        /* ANIMATIONS */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-fadeIn {
-            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-        }
-        
-        /* SMOOTH SCROLL */
-        html {
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-        
-        /* ALLGEMEINE FIXES FÜR ÜBERLAUF */
-        img, table, video, iframe, canvas, svg {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        /* FORCIERTE DARK MODE FARBEN FÜR PREISSEKTION - HELL */
-body.dark-mode .pricing-section h2,
-body.dark-mode .pricing-section p,
-body.dark-mode .pricing-table th,
-body.dark-mode .pricing-table td {
-    color: #ffffff !important;  /* Reines Weiß für maximale Helligkeit */
-}
-
-body.dark-mode .pricing-table .price-cell {
-    color: var(--gold) !important;  /* Gold bleibt */
-}
-            /* ÜBER UNS SECTION */
+        /* ABOUT SECTION */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -1016,11 +491,6 @@ body.dark-mode .pricing-table .price-cell {
             border: 1px solid var(--border-color);
             text-align: center;
             border-radius: 4px;
-            position: relative;
-        }
-        
-        body.dark-mode .about-image {
-            background: var(--card-bg);
         }
         
         .about-icon-box {
@@ -1054,78 +524,290 @@ body.dark-mode .pricing-table .price-cell {
             margin-top: 1rem;
         }
         
-        /* RESPONSIVE für Über Uns */
+        /* PRICING SECTION */
+        .pricing-section {
+            background: var(--navy);
+            color: var(--cream);
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .pricing-section h2,
+        .pricing-section p {
+            color: var(--cream);
+        }
+        
+        .pricing-section h2:after {
+            background: var(--gold);
+        }
+        
+        .pricing-table-container {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 5rem auto 0;
+            max-width: 1000px;
+        }
+        
+        .pricing-table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: separate;
+            border-spacing: 0;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        
+        .pricing-table thead {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .pricing-table th {
+            padding: 2rem;
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            white-space: nowrap;
+            color: var(--cream);
+        }
+        
+        .pricing-table td {
+            padding: 1.8rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+            white-space: nowrap;
+            color: var(--cream);
+        }
+        
+        .pricing-table .price-cell {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            font-weight: 400;
+        }
+        
+        /* CONTACT FORM */
+        .contact-form {
+            max-width: 700px;
+            margin: 5rem auto 0;
+            width: 100%;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+        
+        .form-group {
+            margin-bottom: 2.5rem;
+            width: 100%;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            color: var(--navy);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 300;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            font-size: 1rem;
+            transition: var(--transition);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            max-width: 100%;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(197, 165, 114, 0.1);
+        }
+        
+        /* FOOTER */
+        footer {
+            background: var(--navy);
+            color: var(--cream);
+            padding: 6rem 0 4rem;
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4rem;
+            margin-bottom: 4rem;
+            width: 100%;
+        }
+        
+        .footer-info h3 {
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .footer-info p,
+        .footer-info a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .footer-info a:hover {
+            color: var(--gold);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
+        /* MODALS */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background: var(--card-bg);
+            margin: 5% auto;
+            padding: 4rem;
+            max-width: 800px;
+            border-radius: 4px;
+            position: relative;
+            border: 1px solid var(--border-color);
+            width: 90%;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            .container { padding: 0 3rem; }
+            section { padding: 8rem 0; }
+        }
+        
         @media (max-width: 992px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .about-image {
-                max-width: 500px;
-                margin: 0 auto;
-            }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-links { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
         }
         
         @media (max-width: 768px) {
-            .about-image {
+            .container { padding: 0 2rem; }
+            section { padding: 6rem 0; }
+            .mobile-menu-btn { display: block; }
+            nav ul {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: var(--card-bg);
+                flex-direction: column;
                 padding: 2rem;
+                gap: 1.5rem;
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+                border-top: 1px solid var(--border-color);
+                z-index: 999;
             }
-            
-            .about-features li {
-                font-size: 1rem;
+            nav ul.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
             }
+            .services-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; gap: 1.5rem; }
+            .footer-links { grid-template-columns: 1fr; gap: 2rem; }
+            .modal-content { padding: 2rem; width: 95%; }
+        }
+        
+        .animate-fadeIn {
+            animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        
+        body.dark-mode .pricing-section h2,
+        body.dark-mode .pricing-section p,
+        body.dark-mode .pricing-table th,
+        body.dark-mode .pricing-table td {
+            color: #ffffff !important;
         }
     </style>
 </head>
 <body>
-    <!-- DARK MODE TOGGLE -->
     <div class="theme-toggle" id="themeToggle">
-        <svg class="moon" viewBox="0 0 24 24">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-        <svg class="sun" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="5"/>
-            <line x1="12" y1="1" x2="12" y2="3"/>
-            <line x1="12" y1="21" x2="12" y2="23"/>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-            <line x1="1" y1="12" x2="3" y2="12"/>
-            <line x1="21" y1="12" x2="23" y2="12"/>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-        </svg>
+        <svg class="moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     </div>
 
-    <!-- HEADER -->
     <header id="main-header">
         <div class="container header-content">
-            <div class="logo-container">
+            <div class="logo-container" id="logoHomeButton">
                 <img src="Neu_logo.png" alt="AQUA GLASS Logo" class="logo-img">
-                
                 <div class="logo-text">AQUA GLASS</div>
             </div>
-            
             <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
-            
             <nav>
                 <ul id="mainNav">
-                    <li><a href="#home">Home</a></li>
                     <li><a href="#services">Leistungen</a></li>
                     <li><a href="#pricing">Preise</a></li>
                     <li><a href="#contact">Kontakt</a></li>
-                    <li><a href="#" id="openImpressum">Impressum</a></li>
-                    <li><a href="#" id="openDatenschutz">Datenschutz</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content animate-fadeIn">
@@ -1133,59 +815,41 @@ body.dark-mode .pricing-table .price-cell {
                 <p class="lead">AQUA GLASS steht für exzellente Fensterreinigung in Perfektion. Mit Präzision, höchster Sorgfalt und Premium-Produkten verwandeln wir Ihre Fenster in strahlende Blickfänger.</p>
                 <a href="#contact" class="cta-button">
                     <span>Termin vereinbaren</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
             </div>
         </div>
     </section>
-        </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services">
-            </section>
-
-    <!-- ÜBER UNS SECTION -->
     <section id="about">
         <div class="container">
             <h2>Über AQUA GLASS</h2>
             <p class="lead">Premium Fensterreinigung mit Leidenschaft für kristallklare Ergebnisse.</p>
-            
             <div class="about-grid">
                 <div class="about-text">
                     <h3>Unsere Philosophie</h3>
                     <p>Wir bei AQUA GLASS haben es uns zur Aufgabe gemacht, Fensterreinigung neu zu definieren. Kein Standard, keine Kompromisse – nur makellose Sauberkeit und strahlende Klarheit. Mit modernsten Techniken, umweltfreundlichen Produkten und einem geschulten Auge für jedes Detail setzen wir neue Maßstäbe in der Branche.</p>
-                    
                     <h3>Was uns auszeichnet</h3>
                     <ul class="about-features">
                         <li> Professionelle Ausrüstung mit Wasseraufbereitungssystem</li>
                         <li> Streifenfreies Ergebnis durch reines, entmineralisiertes Wasser</li>
                         <li> Umweltbewusste Reinigungsmittel ohne schädliche Chemikalien</li>
                         <li> Geprüfte und erfahrene Mitarbeiter in einheitlicher Berufskleidung</li>
-                        <li> Pünktlichkeit, Zuverlässigkeit und absolute Diskretion</li>
                         <li> Maßgeschneiderte Reinigungspläne für jedes Objekt</li>
                     </ul>
-                    
                     <a href="#contact" class="cta-button" style="margin-top: 1rem;">
                         <span>Jetzt unverbindlich anfragen</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
                 </div>
-                
                 <div class="about-image">
                     <div class="about-icon-box">
                         <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5">
                             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
                             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
-                            <line x1="8" y1="9" x2="2" y2="9"/>
-                            <line x1="22" y1="9" x2="16" y2="9"/>
-                            <line x1="8" y1="13" x2="2" y2="13"/>
-                            <line x1="22" y1="13" x2="16" y2="13"/>
-                            <line x1="8" y1="17" x2="2" y2="17"/>
-                            <line x1="22" y1="17" x2="16" y2="17"/>
+                            <line x1="8" y1="9" x2="2" y2="9"/><line x1="22" y1="9" x2="16" y2="9"/>
+                            <line x1="8" y1="13" x2="2" y2="13"/><line x1="22" y1="13" x2="16" y2="13"/>
+                            <line x1="8" y1="17" x2="2" y2="17"/><line x1="22" y1="17" x2="16" y2="17"/>
                         </svg>
                     </div>
                     <p class="about-quote">"Ihre Fenster sind unser Aushängeschild – wir behandeln jedes Glas so sorgfältig wie unser eigenes."</p>
@@ -1195,531 +859,147 @@ body.dark-mode .pricing-table .price-cell {
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services">
-
-    <!-- SERVICES SECTION -->
     <section id="services">
         <div class="container">
             <h2>Unsere Premium-Stufen</h2>
-            <p class="lead">Wählen Sie zwischen unseren drei exklusiven Reinigungsstufen – jede ausgelegt für höchste Ansprüche und makellose Ergebnisse.</p>
-            
+            <p class="lead">Wählen Sie zwischen unseren drei exklusiven Reinigungsstufen – jede ausgelegt für höchste Ansprüche.</p>
             <div class="services-grid">
-                <!-- Stufe 1: Basis -->
-                <div class="service-card animate-fadeIn">
-                    <h3>Basis</h3>
-                    <p>Gründliche Außenreinigung für sofortige Klarheit</p>
-                    <div class="service-price">ab 8€</div>
-                    <ul class="service-features">
-                        <li>Professionelle Außenreinigung</li>
-                        <li>Streifenfreie Trocknung</li>
-                        <li>Ökologische Reinigungsmittel</li>
-                        <li>Sorgfältige Nachkontrolle</li>
-                    </ul>
-                    <a href="#contact" class="cta-button" style="background: var(--gold); border-color: var(--gold); color: var(--navy);">Basis auswählen</a>
-                </div>
-                
-                <!-- Stufe 2: Komplett -->
-                <div class="service-card animate-fadeIn" style="animation-delay: 0.2s;">
-                    <h3>Komplett</h3>
-                    <p>Umfassende Innen- und Außenreinigung</p>
-                    <div class="service-price">ab 12€</div>
-                    <ul class="service-features">
-                        <li>Innen- & Außenreinigung</li>
-                        <li>Rahmenpflege inklusive</li>
-                        <li>Fensterbänke reinigen</li>
-                        <li>Premium Pflegemittel</li>
-                    </ul>
-                    <a href="#contact" class="cta-button" style="background: var(--gold); border-color: var(--gold); color: var(--navy);">Komplett auswählen</a>
-                </div>
-                
-                <!-- Stufe 3: Premium -->
-                <div class="service-card animate-fadeIn" style="animation-delay: 0.4s;">
-                    <h3>Premium</h3>
-                    <p>Luxusbehandlung mit Extraleistungen</p>
-                    <div class="service-price">ab 15€</div>
-                    <ul class="service-features">
-                        <li>Komplett-Reinigung</li>
-                        <li>Dichtungspflege</li>
-                        <li>Glasversiegelung optional</li>
-                        <li>Prioritärer Terminservice</li>
-                    </ul>
-                    <a href="#contact" class="cta-button" style="background: var(--gold); border-color: var(--gold); color: var(--navy);">Premium auswählen</a>
-                </div>
+                <div class="service-card animate-fadeIn"><h3>Basis</h3><p>Gründliche Außenreinigung</p><div class="service-price">ab 8€</div><ul class="service-features"><li>Professionelle Außenreinigung</li><li>Streifenfreie Trocknung</li><li>Ökologische Reinigungsmittel</li></ul><a href="#contact" class="cta-button" style="background: var(--gold); border-color: var(--gold); color: var(--navy);">Basis auswählen</a></div>
+                <div class="service-card animate-fadeIn" style="animation-delay: 0.2s;"><h3>Komplett</h3><p>Innen- und Außenreinigung</p><div class="service-price">ab 12€</div><ul class="service-features"><li>Innen- & Außenreinigung</li><li>Rahmenpflege inklusive</li><li>Fensterbänke reinigen</li></ul><a href="#contact" class="cta-button" style="background: var(--gold); border-color: var(--gold); color: var(--navy);">Komplett auswählen</a></div>
+                <div class="service-card animate-fadeIn" style="animation-delay: 0.4s;"><h3>Premium</h3><p>Luxusbehandlung mit Extras</p><div class="service-price">ab 15€</div><ul class="service-features"><li>Komplett-Reinigung</li><li>Dichtungspflege</li><li>Glasversiegelung optional</li></ul><a href="#contact" class="cta-button" style="background: var(--gold); border-color: var(--gold); color: var(--navy);">Premium auswählen</a></div>
             </div>
         </div>
     </section>
 
-    <!-- PRICING SECTION -->
     <section class="pricing-section" id="pricing">
         <div class="container">
             <h2>Transparente Preisgestaltung</h2>
             <p class="lead">Klare Preise für höchste Qualität – ohne versteckte Kosten.</p>
-            
-            <!-- Container für horizontales Scrollen der Tabelle auf Mobile -->
             <div class="pricing-table-container">
                 <table class="pricing-table animate-fadeIn">
-                    <thead>
-                        <tr>
-                            <th>Fenstertyp</th>
-                            <th>Basis</th>
-                            <th>Komplett</th>
-                            <th>Premium</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th>Fenstertyp</th><th>Basis</th><th>Komplett</th><th>Premium</th></tr></thead>
                     <tbody>
-                        <tr>
-                            <td>Kleines Fenster (bis 1m²)</td>
-                            <td class="price-cell">8€</td>
-                            <td class="price-cell">12€</td>
-                            <td class="price-cell">15€</td>
-                        </tr>
-                        <tr>
-                            <td>Standard Fenster (1-2m²)</td>
-                            <td class="price-cell">10€</td>
-                            <td class="price-cell">15€</td>
-                            <td class="price-cell">18€</td>
-                        </tr>
-                        <tr>
-                            <td>Großes Fenster/Tür (ab 2m²)</td>
-                            <td class="price-cell">15€</td>
-                            <td class="price-cell">22€</td>
-                            <td class="price-cell">25€</td>
-                        </tr>
+                        <tr><td>Kleines Fenster (bis 1m²)</td><td class="price-cell">8€</td><td class="price-cell">12€</td><td class="price-cell">15€</td></tr>
+                        <tr><td>Standard Fenster (1-2m²)</td><td class="price-cell">10€</td><td class="price-cell">15€</td><td class="price-cell">18€</td></tr>
+                        <tr><td>Großes Fenster/Tür (ab 2m²)</td><td class="price-cell">15€</td><td class="price-cell">22€</td><td class="price-cell">25€</td></tr>
                     </tbody>
                 </table>
             </div>
-            
-            <p style="margin-top: 3rem; text-align: center; font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">
-                * Zuschläge für Höhenarbeit, extreme Verschmutzung oder Sonderwünsche auf Anfrage
-            </p>
+            <p style="margin-top: 3rem; text-align: center; font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">* Zuschläge für Höhenarbeit, extreme Verschmutzung oder Sonderwünsche auf Anfrage</p>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
     <section id="contact">
         <div class="container">
             <h2>Ihre Anfrage</h2>
-            <p class="lead">Vereinbaren Sie einen unverbindlichen Vor-Ort-Termin oder fordern Sie ein persönliches Angebot an.</p>
-            
+            <p class="lead">Vereinbaren Sie einen unverbindlichen Vor-Ort-Termin oder fordern Sie ein Angebot an.</p>
             <div class="contact-form animate-fadeIn">
-                <!-- FORMSPREE FORM - KOSTENLOSER EMAIL-SERVICE -->
                 <form action="https://formspree.io/f/xykenlvj" method="POST" id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" class="form-control" required placeholder="Ihr Name">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Telefon *</label>
-                            <input type="tel" id="phone" name="phone" class="form-control" required placeholder="Ihre Telefonnummer">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">E-Mail *</label>
-                        <input type="email" id="email" name="email" class="form-control" required placeholder="Ihre E-Mail-Adresse">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service">Gewünschtes Paket *</label>
-                        <select id="service" name="service" class="form-control" required>
-                            <option value="">Bitte wählen Sie ein Paket</option>
-                            <option value="basis">Basis</option>
-                            <option value="komplett">Komplett</option>
-                            <option value="premium">Premium</option>
-                            <option value="premium">persönlich abgestimmt</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Besondere Wünsche oder Informationen</label>
-                        <textarea id="message" name="message" class="form-control" placeholder="Anzahl der Fenster, besondere Anforderungen, etc..."></textarea>
-                    </div>
-                    
-                    <input type="hidden" name="_subject" value="Neue Anfrage von AQUA GLASS Website">
-                    <input type="hidden" name="_replyto" value="%email%">
-                    <input type="hidden" name="_language" value="de">
-                    
-                    <button type="submit" class="cta-button" style="width: 100%;">
-                        <span>Anfrage senden</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-                        </svg>
-                    </button>
+                    <div class="form-row"><div class="form-group"><label for="name">Name *</label><input type="text" id="name" name="name" class="form-control" required placeholder="Ihr Name"></div><div class="form-group"><label for="phone">Telefon *</label><input type="tel" id="phone" name="phone" class="form-control" required placeholder="Ihre Telefonnummer"></div></div>
+                    <div class="form-group"><label for="email">E-Mail *</label><input type="email" id="email" name="email" class="form-control" required placeholder="Ihre E-Mail-Adresse"></div>
+                    <div class="form-group"><label for="service">Gewünschtes Paket *</label><select id="service" name="service" class="form-control" required><option value="">Bitte wählen Sie ein Paket</option><option value="basis">Basis</option><option value="komplett">Komplett</option><option value="premium">Premium</option><option value="individuell">persönlich abgestimmt</option></select></div>
+                    <div class="form-group"><label for="message">Besondere Wünsche</label><textarea id="message" name="message" class="form-control" placeholder="Anzahl der Fenster, besondere Anforderungen..."></textarea></div>
+                    <button type="submit" class="cta-button" style="width: 100%;"><span>Anfrage senden</span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-links">
-                <div class="footer-info">
-                    <img src="Neu_logo.png" alt="AQUA GLASS Logo" style="height: 60px; margin-bottom: 2rem; opacity: 0.9;">
-                    <h3>AQUA GLASS</h3>
-                    <p>Premium Fensterreinigung mit höchstem Anspruch an Qualität und Service.</p>
-                </div>
-                
-                <div class="footer-info">
-                    <h3>Kontakt</h3>
-                    <a href="tel:+491721611315">+49 172 1611315</a>
-                    <a href="mailto:info@aqua-glass.de">info@aqua-glass.de</a>
-                </div>
-                
-                <div class="footer-info">
-                    <h3>Service</h3>
-                    <a href="#services">Leistungen</a>
-                    <a href="#pricing">Preise</a>
-                    <a href="#contact">Kontakt</a>
-                </div>
-                
-                <div class="footer-info">
-                    <h3>Rechtliches</h3>
-                    <a href="#" id="footerImpressum">Impressum</a>
-                    <a href="#" id="footerDatenschutz">Datenschutz</a>
-                </div>
+                <div class="footer-info"><img src="Neu_logo.png" alt="AQUA GLASS Logo" style="height: 60px; margin-bottom: 2rem; opacity: 0.9;"><h3>AQUA GLASS</h3><p>Premium Fensterreinigung mit höchstem Anspruch.</p></div>
+                <div class="footer-info"><h3>Kontakt</h3><a href="tel:+491721611315">+49 172 1611315</a><a href="mailto:info@aqua-glass.de">info@aqua-glass.de</a></div>
+                <div class="footer-info"><h3>Service</h3><a href="#services">Leistungen</a><a href="#pricing">Preise</a><a href="#contact">Kontakt</a></div>
+                <div class="footer-info"><h3>Rechtliches</h3><a href="#" id="footerImpressum">Impressum</a><a href="#" id="footerDatenschutz">Datenschutz</a></div>
             </div>
-            
-            <div class="copyright">
-                © <span id="currentYear"></span> AQUA GLASS Premium Fensterreinigung. Alle Rechte vorbehalten.
-            </div>
+            <div class="copyright">© <span id="currentYear"></span> AQUA GLASS Premium Fensterreinigung. Alle Rechte vorbehalten.</div>
         </div>
     </footer>
 
-    <!-- IMPRESSUM MODAL -->
-    <div class="modal" id="impressumModal">
-        <div class="modal-content">
-             <button class="close-modal" id="closeImpressum">×</button>
-    <h2>Impressum</h2>
-    
-    <h3>Angaben gemäß § 5 TMG:</h3>
-    <p><strong>AQUA GLASS Premium Fensterreinigung</strong><br>
-    Inhaber: Muhammad Furqan Ramzan<br>
-    Heinrichstraße 38<br>
-    65479 Raunheim</p>
-    
-    <h3>Kontakt:</h3>
-    <p>Telefon: <a href="tel:+491721611315" style="color: var(--gold); text-decoration: none;">+49 172 1611315</a><br>
-    E-Mail: <a href="Email:info@aqua-glass.de" style="color: var(--gold); text-decoration: none;">info@aqua-glass.de</a></p>
-    
-    <h3>Handwerksordnung (HandwO):</h3>
-    <p>Das Gewerbe ist als zulassungsfreies Handwerk gemäß Anlage B1 Nr. 53 der Handwerksordnung eingetragen.<br>
-    Zuständige Handwerkskammer: <strong>Handwerkskammer Rhein-Main</strong><br>
-    Bockenheimer Landstraße 21, 60325 Frankfurt am Main</p>
-    
-    <h3>Umsatzsteuer-ID:</h3>
-    <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br>
-    <strong>wird noch beantragt</strong></p>
-    
-    <h3>Gewerbeanmeldung:</h3>
-    <p>Die Gewerbeerlaubnis wurde am [01.04.2026] von der Stadt Raunheim erteilt.</p>
-    
-    <h3>Berufshaftpflichtversicherung:</h3>
-    <p>Name der Versicherung: <strong>wird noch abgeschlossen</strong><br>
-    Geltungsraum: Deutschland</p>
-    
-    <h3>EU-Streitschlichtung:</h3>
-    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" style="color: var(--gold);">https://ec.europa.eu/consumers/odr/</a><br>
-    Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
-    
-    <h3>Verbraucherstreitschlichtung/Universalschlichtungsstelle:</h3>
-    <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-    
-    <h3>Haftung für Inhalte:</h3>
-    <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
-    
-    <h3>Haftung für Links:</h3>
-    <p>Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
-    
-    <h3>Urheberrecht:</h3>
-    <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
-    
-    <h3>Bildernachweis:</h3>
-    <p>Die Bilder, Grafiken und Texte auf dieser Website wurden erstellt von AQUA GLASS Premium Fensterreinigung oder stammen aus lizenzfreien Quellen.</p>
-
-            <p>Stand: <span id="impressumDate"></span></p>
-        </div>
-    </div>
-
-    <!-- DATENSCHUTZ MODAL -->
-    <div class="modal" id="datenschutzModal">
-        <div class="modal-content">
-            <button class="close-modal" id="closeDatenschutz">×</button>
-            <h2>Datenschutzerklärung</h2>
-            
-            <h3>1. Datenschutz auf einen Blick</h3>
-            <p><strong>Allgemeine Hinweise</strong><br>
-            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
-            
-            <h3>2. Hosting</h3>
-            <p>Diese Website wird bei GitHub Pages gehosted. Anbieter ist die GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. GitHub verarbeitet Daten zur Bereitstellung der Website. Weitere Informationen entnehmen Sie der Datenschutzerklärung von GitHub: https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</p>
-            
-            <h3>3. Allgemeine Hinweise und Pflichtinformationen</h3>
-            <p><strong>Datenschutz</strong><br>
-            Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
-            
-            <h3>4. Datenerfassung auf dieser Website</h3>
-            <p><strong>Kontaktformular</strong><br>
-            Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
-            
-            <p><strong>Formspree</strong><br>
-            Für die Verarbeitung des Kontaktformulars verwenden wir den Dienst Formspree. Anbieter ist Formspree Inc. Die von Ihnen im Kontaktformular eingegebenen Daten werden an Formspree übermittelt und dort gespeichert. Weitere Informationen finden Sie in der Datenschutzerklärung von Formspree: https://formspree.io/legal/privacy-policy/</p>
-            
-            <h3>5. Ihre Rechte</h3>
-            <p>Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen.</p>
-            
-            <p>Stand: <span id="datenschutzDate"></span></p>
-        </div>
-    </div>
+    <!-- MODALS -->
+    <div class="modal" id="impressumModal"><div class="modal-content"><button class="close-modal" id="closeImpressum">×</button><h2>Impressum</h2><p><strong>AQUA GLASS Premium Fensterreinigung</strong><br>Inhaber: Muhammad Furqan Ramzan<br>Heinrichstraße 38, 65479 Raunheim</p><h3>Kontakt:</h3><p>Tel: <a href="tel:+491721611315" style="color:var(--gold)">+49 172 1611315</a><br>Email: info@aqua-glass.de</p><p>Stand: <span id="impressumDate"></span></p></div></div>
+    <div class="modal" id="datenschutzModal"><div class="modal-content"><button class="close-modal" id="closeDatenschutz">×</button><h2>Datenschutzerklärung</h2><p><strong>Allgemeine Hinweise</strong><br>Ihre Daten werden vertraulich behandelt. Bei Kontaktaufnahme werden Ihre Angaben zur Bearbeitung gespeichert.</p><p>Stand: <span id="datenschutzDate"></span></p></div></div>
 
     <script>
-        // Mobile Menu Toggle
+        // Logo als Home-Button: Scrollt zu hero (Home)
+        const logoHome = document.getElementById('logoHomeButton');
+        logoHome.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile Menu
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mainNav = document.getElementById('mainNav');
-        
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenuBtn.classList.toggle('active');
             mainNav.classList.toggle('active');
         });
-        
-        // Close mobile menu when clicking a link
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenuBtn.classList.remove('active');
                 mainNav.classList.remove('active');
             });
         });
-        
-        // Dark Mode Toggle
+
+        // Dark Mode
         const themeToggle = document.getElementById('themeToggle');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        
-        // Check for saved theme or prefered scheme
-        const currentTheme = localStorage.getItem('theme');
-        
-        if (currentTheme === 'dark' || (!currentTheme && prefersDarkScheme.matches)) {
-            document.body.classList.add('dark-mode');
-        }
-        
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark.matches)) document.body.classList.add('dark-mode');
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            
-            // Save preference
-            if (document.body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
         });
-        
-        // Modal Functions
+
+        // Modal Logic
         const impressumModal = document.getElementById('impressumModal');
         const datenschutzModal = document.getElementById('datenschutzModal');
-        
-        // Open Impressum
-        document.getElementById('openImpressum').addEventListener('click', (e) => {
-            e.preventDefault();
-            impressumModal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
-        
-        document.getElementById('footerImpressum').addEventListener('click', (e) => {
-            e.preventDefault();
-            impressumModal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
-        
-        // Open Datenschutz
-        document.getElementById('openDatenschutz').addEventListener('click', (e) => {
-            e.preventDefault();
-            datenschutzModal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
-        
-        document.getElementById('footerDatenschutz').addEventListener('click', (e) => {
-            e.preventDefault();
-            datenschutzModal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        });
-        
-        // Close Modals
-        document.getElementById('closeImpressum').addEventListener('click', () => {
-            impressumModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-        
-        document.getElementById('closeDatenschutz').addEventListener('click', () => {
-            datenschutzModal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-        
-        // Close modal when clicking outside
-        window.addEventListener('click', (e) => {
-            if (e.target === impressumModal) {
-                impressumModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-            if (e.target === datenschutzModal) {
-                datenschutzModal.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-        
-        // Set current year in footer
+        function openModal(modal) { modal.style.display = 'block'; document.body.style.overflow = 'hidden'; }
+        function closeModal(modal) { modal.style.display = 'none'; document.body.style.overflow = 'auto'; }
+        document.getElementById('footerImpressum').addEventListener('click', (e) => { e.preventDefault(); openModal(impressumModal); });
+        document.getElementById('footerDatenschutz').addEventListener('click', (e) => { e.preventDefault(); openModal(datenschutzModal); });
+        document.getElementById('closeImpressum').addEventListener('click', () => closeModal(impressumModal));
+        document.getElementById('closeDatenschutz').addEventListener('click', () => closeModal(datenschutzModal));
+        window.addEventListener('click', (e) => { if (e.target === impressumModal) closeModal(impressumModal); if (e.target === datenschutzModal) closeModal(datenschutzModal); });
+
+        // Footer Jahr
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
-        // Set dates in legal documents
-        const today = new Date();
-        const formattedDate = today.toLocaleDateString('de-DE', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric'
-        });
-        
-        document.getElementById('impressumDate').textContent = formattedDate;
-        document.getElementById('datenschutzDate').textContent = formattedDate;
-        
-        // Form submission with Formspree
-        const contactForm = document.getElementById('contactForm');
-        
-        contactForm.addEventListener('submit', async (e) => {
+        const todayFormatted = new Date().toLocaleDateString('de-DE');
+        document.getElementById('impressumDate').textContent = todayFormatted;
+        document.getElementById('datenschutzDate').textContent = todayFormatted;
+
+        // Form Submit
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
-            const formData = new FormData(contactForm);
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            // Show loading state
-            submitBtn.innerHTML = '<span>Wird gesendet...</span>';
-            submitBtn.disabled = true;
-            
+            const btn = form.querySelector('button[type="submit"]');
+            const original = btn.innerHTML;
+            btn.innerHTML = '<span>Wird gesendet...</span>';
+            btn.disabled = true;
             try {
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    // Success message with gold styling
-                    const successMsg = `
-                        <div style="position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); 
-                                   background:var(--card-bg); color:var(--text-primary); padding:3rem; 
-                                   border:2px solid var(--gold); z-index:9999; text-align:center; 
-                                   max-width:500px; width:90%; box-shadow:var(--shadow);">
-                            <h3 style="color:var(--gold); margin-bottom:1rem;">Vielen Dank für Ihre Anfrage!</h3>
-                            <p>Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.</p>
-                            <button onclick="this.parentElement.remove()" 
-                                    style="margin-top:2rem; padding:0.8rem 2rem; background:var(--gold); 
-                                           border:none; color:var(--navy); cursor:pointer; font-family:inherit;">
-                                Schließen
-                            </button>
-                        </div>
-                    `;
-                    
-                    document.body.insertAdjacentHTML('beforeend', successMsg);
-                    contactForm.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
-                alert('Es gab ein Problem beim Senden Ihrer Anfrage. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt per Telefon.');
-            } finally {
-                // Reset button
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }
+                const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+                if (res.ok) {
+                    const msgDiv = document.createElement('div');
+                    msgDiv.innerHTML = `<div style="position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:var(--card-bg); padding:2rem; border:2px solid var(--gold); z-index:9999; text-align:center;"><h3 style="color:var(--gold);">Vielen Dank!</h3><p>Wir melden uns in 24h.</p><button onclick="this.parentElement.remove()" style="margin-top:1rem; padding:0.5rem 1rem; background:var(--gold); border:none; cursor:pointer;">Schließen</button></div>`;
+                    document.body.appendChild(msgDiv);
+                    form.reset();
+                } else throw new Error();
+            } catch (err) { alert('Fehler beim Senden. Bitte versuchen Sie es erneut.'); }
+            finally { btn.innerHTML = original; btn.disabled = false; }
         });
-        
-        // Smooth scroll for navigation links
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+
+        // Smooth Scroll für Nav-Links
+        document.querySelectorAll('nav a[href^="#"], .cta-button[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
+                const target = this.getAttribute('href');
+                if (target && target !== '#') {
+                    e.preventDefault();
+                    const el = document.querySelector(target);
+                    if (el) window.scrollTo({ top: el.offsetTop - 80, behavior: 'smooth' });
                 }
             });
         });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('main-header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = 'var(--shadow)';
-            } else {
-                header.style.boxShadow = 'none';
-            }
-        });
-        
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fadeIn');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements for animation
-        document.querySelectorAll('.service-card, .pricing-table, .contact-form').forEach(el => {
-            observer.observe(el);
-        });
-        
-        // iOS Viewport Height Fix
-        function setVH() {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        }
-        
-        setVH();
-        window.addEventListener('resize', setVH);
-        window.addEventListener('orientationchange', setVH);
-        
-        // Prevent horizontal scroll on touch devices
-        document.addEventListener('touchmove', function(e) {
-            if (e.touches.length > 1) {
-                e.preventDefault();
-            }
-        }, { passive: false });
-        
-        // Fix for iOS Safari 100vh issue
-        function setRealViewportHeight() {
-            const vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-            
-            // Set hero section height
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.height = `calc(var(--vh, 1vh) * 100)`;
-            }
-        }
-        
-        // Initial call
-        setRealViewportHeight();
-        
-        // Update on resize and orientation change
-        window.addEventListener('resize', setRealViewportHeight);
-        window.addEventListener('orientationchange', setRealViewportHeight);
     </script>
 </body>
-
 </html>
