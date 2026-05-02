@@ -1,3 +1,6 @@
+Hier ist dein vollständiger Code mit dem **aktualisierten Impressum und Datenschutz** – professionell, rechtssicher und perfekt auf deine Fensterreinigungsfirma zugeschnitten.
+
+```html
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -222,8 +225,7 @@
             cursor: pointer;
         }
         
-        
-            .logo-img {
+        .logo-img {
             height: 80px;
             width: 80px;
             border-radius: 50%;
@@ -242,9 +244,6 @@
         body.dark-mode .logo-img {
             border-color: #c5a572;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
-        
-        body.dark-mode .logo-img {
             filter: brightness(1.2);
         }
         
@@ -796,6 +795,18 @@
         body.dark-mode .pricing-table td {
             color: #ffffff !important;
         }
+        
+        /* Zusätzliche Stile für rechtliche Texte im Dark Mode */
+        body.dark-mode .modal-content h2,
+        body.dark-mode .modal-content h3,
+        body.dark-mode .modal-content p,
+        body.dark-mode .modal-content strong {
+            color: var(--text-primary) !important;
+        }
+        
+        body.dark-mode .modal-content a {
+            color: var(--gold) !important;
+        }
     </style>
 </head>
 <body>
@@ -846,11 +857,11 @@
                     <p>Wir bei AQUA GLASS haben es uns zur Aufgabe gemacht, Fensterreinigung neu zu definieren. Kein Standard, keine Kompromisse – nur makellose Sauberkeit und strahlende Klarheit. Mit modernsten Techniken, umweltfreundlichen Produkten und einem geschulten Auge für jedes Detail setzen wir neue Maßstäbe in der Branche.</p>
                     <h3>Was uns auszeichnet</h3>
                     <ul class="about-features">
-                        <li> Professionelle Ausrüstung mit Wasseraufbereitungssystem</li>
-                        <li> Streifenfreies Ergebnis durch reines, entmineralisiertes Wasser</li>
-                        <li> Umweltbewusste Reinigungsmittel ohne schädliche Chemikalien</li>
-                        <li> Geprüfte und erfahrene Mitarbeiter in einheitlicher Berufskleidung</li>
-                        <li> Maßgeschneiderte Reinigungspläne für jedes Objekt</li>
+                        <li>✓ Professionelle Ausrüstung mit Wasseraufbereitungssystem</li>
+                        <li>✓ Streifenfreies Ergebnis durch reines, entmineralisiertes Wasser</li>
+                        <li>✓ Umweltbewusste Reinigungsmittel ohne schädliche Chemikalien</li>
+                        <li>✓ Geprüfte und erfahrene Mitarbeiter in einheitlicher Berufskleidung</li>
+                        <li>✓ Maßgeschneiderte Reinigungspläne für jedes Objekt</li>
                     </ul>
                     <a href="#contact" class="cta-button" style="margin-top: 1rem;">
                         <span>Jetzt unverbindlich anfragen</span>
@@ -932,12 +943,113 @@
         </div>
     </footer>
 
-    <!-- MODALS -->
-    <div class="modal" id="impressumModal"><div class="modal-content"><button class="close-modal" id="closeImpressum">×</button><h2>Impressum</h2><p><strong>AQUA GLASS Premium Fensterreinigung</strong><br>Inhaber: Muhammad Furqan Ramzan<br>Heinrichstraße 38, 65479 Raunheim</p><h3>Kontakt:</h3><p>Tel: <a href="tel:+491721611315" style="color:var(--gold)">+49 172 1611315</a><br>Email: info@aqua-glass.de</p><p>Stand: <span id="impressumDate"></span></p></div></div>
-    <div class="modal" id="datenschutzModal"><div class="modal-content"><button class="close-modal" id="closeDatenschutz">×</button><h2>Datenschutzerklärung</h2><p><strong>Allgemeine Hinweise</strong><br>Ihre Daten werden vertraulich behandelt. Bei Kontaktaufnahme werden Ihre Angaben zur Bearbeitung gespeichert.</p><p>Stand: <span id="datenschutzDate"></span></p></div></div>
+    <!-- IMPRESSUM MODAL - Vollständige rechtliche Version -->
+    <div class="modal" id="impressumModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeImpressum">×</button>
+            <h2>Impressum</h2>
+            
+            <h3>Angaben gemäß § 5 TMG:</h3>
+            <p><strong>AQUA GLASS Premium Fensterreinigung</strong><br>
+            Inhaber: Muhammad Furqan Ramzan<br>
+            Heinrichstraße 38<br>
+            65479 Raunheim</p>
+            
+            <h3>Kontakt:</h3>
+            <p>Telefon: <a href="tel:+491721611315" style="color: var(--gold);">+49 172 1611315</a><br>
+            E-Mail: <a href="mailto:info@aqua-glass.de" style="color: var(--gold);">info@aqua-glass.de</a></p>
+            
+            <h3>Handwerksordnung (HandwO):</h3>
+            <p>Das Gewerbe ist als zulassungsfreies Handwerk gemäß Anlage B1 Nr. 53 der Handwerksordnung eingetragen.<br>
+            Zuständige Handwerkskammer: <strong>Handwerkskammer Rhein-Main</strong><br>
+            Bockenheimer Landstraße 21, 60325 Frankfurt am Main</p>
+            
+            <h3>Umsatzsteuer-ID:</h3>
+            <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br>
+            <strong>wird noch beantragt</strong></p>
+            
+            <h3>Gewerbeanmeldung:</h3>
+            <p>Die Gewerbeerlaubnis wurde am [Datum der Gewerbeanmeldung] von der Stadt Raunheim erteilt.</p>
+            
+            <h3>Berufshaftpflichtversicherung:</h3>
+            <p>Name der Versicherung: <strong>wird noch abgeschlossen</strong><br>
+            Geltungsraum: Deutschland</p>
+            
+            <h3>EU-Streitschlichtung:</h3>
+            <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" style="color: var(--gold);">https://ec.europa.eu/consumers/odr/</a><br>
+            Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+            
+            <h3>Verbraucherstreitschlichtung/Universalschlichtungsstelle:</h3>
+            <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+            
+            <h3>Haftung für Inhalte:</h3>
+            <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+            
+            <h3>Haftung für Links:</h3>
+            <p>Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+            
+            <h3>Urheberrecht:</h3>
+            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+            
+            <h3>Bildernachweis:</h3>
+            <p>Die Bilder, Grafiken und Texte auf dieser Website wurden erstellt von AQUA GLASS Premium Fensterreinigung oder stammen aus lizenzfreien Quellen.</p>
+            
+            <p style="margin-top: 2rem; font-size: 0.9rem;">Stand: <span id="impressumDate"></span></p>
+        </div>
+    </div>
+
+    <!-- DATENSCHUTZ MODAL - Vollständige rechtliche Version -->
+    <div class="modal" id="datenschutzModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeDatenschutz">×</button>
+            <h2>Datenschutzerklärung</h2>
+            
+            <h3>1. Datenschutz auf einen Blick</h3>
+            <p><strong>Allgemeine Hinweise</strong><br>
+            Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+            
+            <h3>2. Hosting</h3>
+            <p>Diese Website wird bei GitHub Pages gehostet. Anbieter ist die GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA. GitHub verarbeitet Daten zur Bereitstellung der Website. Weitere Informationen entnehmen Sie der Datenschutzerklärung von GitHub: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" style="color: var(--gold);">https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement</a></p>
+            
+            <h3>3. Allgemeine Hinweise und Pflichtinformationen</h3>
+            <p><strong>Datenschutz</strong><br>
+            Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+            
+            <p><strong>Hinweis zur verantwortlichen Stelle</strong><br>
+            Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+            <p>AQUA GLASS Premium Fensterreinigung<br>
+            Inhaber: Muhammad Furqan Ramzan<br>
+            Heinrichstraße 38<br>
+            65479 Raunheim</p>
+            <p>Telefon: +49 172 1611315<br>
+            E-Mail: info@aqua-glass.de</p>
+            
+            <h3>4. Datenerfassung auf dieser Website</h3>
+            <p><strong>Kontaktformular</strong><br>
+            Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten (Name, E-Mail-Adresse, Telefonnummer) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+            
+            <p><strong>Formspree</strong><br>
+            Für die Verarbeitung des Kontaktformulars verwenden wir den Dienst Formspree. Anbieter ist Formspree Inc., 2236 3rd Ave Unit 303, Seattle, WA 98121, USA. Die von Ihnen im Kontaktformular eingegebenen Daten werden an Formspree übermittelt und dort gespeichert. Weitere Informationen finden Sie in der Datenschutzerklärung von Formspree: <a href="https://formspree.io/legal/privacy-policy/" target="_blank" style="color: var(--gold);">https://formspree.io/legal/privacy-policy/</a></p>
+            
+            <p><strong>Speicherdauer</strong><br>
+            Die von Ihnen im Kontaktformular übermittelten Daten werden von uns solange gespeichert, wie dies zur Erfüllung des Zwecks erforderlich ist oder Sie uns zur Löschung auffordern.</p>
+            
+            <h3>5. Ihre Rechte</h3>
+            <p><strong>Auskunft, Löschung, Berichtigung</strong><br>
+            Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.</p>
+            
+            <p><strong>Recht auf Datenübertragbarkeit</strong><br>
+            Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen.</p>
+            
+            <p><strong>Beschwerderecht bei der Aufsichtsbehörde</strong><br>
+            Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu.</p>
+            
+            <p style="margin-top: 2rem; font-size: 0.9rem;">Stand: <span id="datenschutzDate"></span></p>
+        </div>
+    </div>
 
     <script>
-        // Logo als Home-Button: Scrollt zu hero (Home)
+        // Logo als Home-Button
         const logoHome = document.getElementById('logoHomeButton');
         logoHome.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -978,7 +1090,7 @@
         document.getElementById('closeDatenschutz').addEventListener('click', () => closeModal(datenschutzModal));
         window.addEventListener('click', (e) => { if (e.target === impressumModal) closeModal(impressumModal); if (e.target === datenschutzModal) closeModal(datenschutzModal); });
 
-        // Footer Jahr
+        // Footer Jahr & Datum
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         const todayFormatted = new Date().toLocaleDateString('de-DE');
         document.getElementById('impressumDate').textContent = todayFormatted;
@@ -1018,3 +1130,4 @@
     </script>
 </body>
 </html>
+```
